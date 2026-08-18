@@ -123,18 +123,18 @@ if (raroboVideo && raroboMute) {
   ensureVideoPlays();
 }
 
-/* Header TPS target animation: 0 → 80,000 in exactly one second, then blink. */
+/* Header TPS performance animation: 0 → 80,000 in exactly one second, then blink. */
 (() => {
   const counter = document.getElementById("tps-counter");
   const panel = document.getElementById("header-tps");
   if (!counter || !panel) return;
 
-  const target = 80000;
+  const peak = 80000;
   const durationMs = 1000;
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   if (reducedMotion) {
-    counter.textContent = target.toLocaleString("en-US");
+    counter.textContent = peak.toLocaleString("en-US");
     return;
   }
 
@@ -145,7 +145,7 @@ if (raroboVideo && raroboMute) {
 
     const draw = (now) => {
       const progress = Math.min((now - startedAt) / durationMs, 1);
-      const value = Math.floor(target * progress);
+      const value = Math.floor(peak * progress);
       counter.textContent = value.toLocaleString("en-US");
 
       if (progress < 1) {
@@ -153,7 +153,7 @@ if (raroboVideo && raroboMute) {
         return;
       }
 
-      counter.textContent = target.toLocaleString("en-US");
+      counter.textContent = peak.toLocaleString("en-US");
       panel.classList.add("tps-hit");
       window.setTimeout(() => {
         panel.classList.remove("tps-hit");
