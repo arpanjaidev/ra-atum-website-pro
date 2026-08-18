@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>THOTH • India's VPS, VPN & Security</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for hamburger icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+
+  <link rel="stylesheet" href="css/thoth-vps-vpn.css">
+
+</head>
+<body>
+  <div class="grid-bg"></div>
+  <div class="scan"></div>
+  <!-- HEADER NAV START -->
+  <header>
+    <button class="hamburger" id="hamburger-btn" aria-label="Open menu">
+      <i class="fas fa-bars"></i>
+    </button>
+    <nav>
+      <a href="index.html">HOME</a>
+      <a href="#vps">VPS</a>
+      <a href="http://localhost:8888/login" target="_blank" rel="noopener">VPN</a>
+      <a href="#pricing">PRICING</a>
+      <a href="#technology">TECHNOLOGY</a>
+      <a href="#about">ABOUT US</a>
+      <a href="#contact">CONTACT</a>
+      <a href="#login">LOGIN</a>
+    </nav>
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay">
+      <button class="mobile-nav-close" id="close-mobile-nav" aria-label="Close menu">&times;</button>
+      <div class="mobile-nav">
+        <a href="index.html" onclick="closeMobileNav()">HOME</a>
+        <a href="#vps" onclick="closeMobileNav()">VPS</a>
+        <a href="http://localhost:8888/login" target="_blank" rel="noopener" onclick="closeMobileNav()">VPN</a>
+        <a href="#pricing" onclick="closeMobileNav()">PRICING</a>
+        <a href="#technology" onclick="closeMobileNav()">TECHNOLOGY</a>
+        <a href="#about" onclick="closeMobileNav()">ABOUT US</a>
+        <a href="#contact" onclick="closeMobileNav()">CONTACT</a>
+        <a href="#login" onclick="closeMobileNav()">LOGIN</a>
+      </div>
+    </div>
+  </header>
+  <!-- HEADER NAV END -->
+
+  <div class="header">
+    <img src="THOTH_LOGO_HD_RADAR.png" alt="THOTH Logo" class="logo">
+    <h1>THOTH</h1>
+    <div class="subtitle">India's VPS • VPN • Security Platform</div>
+  </div>
+  <div class="cta-buttons">
+    <a href="#plans">See Plans</a>
+    <a href="#ra-atum">About RA Atum</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="features">
+    <div class="feature">
+      <h2>VPS Hosting in India</h2>
+      <p>Ultra-fast, reliable cloud servers hosted in India's top datacenters. Full root access, custom OS, and blazing NVMe storage for developers, businesses, and creators.</p>
+    </div>
+    <div class="feature">
+      <h2>Secure High-Speed VPN</h2>
+      <p>Access the open internet and protect your data. Zero logs, easy setup, unlimited bandwidth, and privacy-first technology. Your privacy, your freedom.</p>
+    </div>
+    <div class="feature">
+      <h2>Crypto-Powered, Indian Support</h2>
+      <p>Built to support RA ATUM node infrastructure, secure operator access, and India-first deployment. Get hardened environments, dependable connectivity, and a modern dashboard built for operators.</p>
+    </div>
+  </div>
+  <div class="divider"></div>
+  <div class="about-section" id="ra-atum">
+    <h3>What is RA Atum?</h3>
+    <p>
+      RA ATUM is an original Layer-1 blockchain with a C++ core. THOTH is the infrastructure layer for secure validator and node operations on the RA ATUM HEKA127 working testnet. The native RA coin pays network gas; it is not an external contract token.
+    </p>
+    <p>
+      <a href="network.html" style="color:var(--primary);font-weight:bold;text-decoration:underline;">Explore the RA ATUM network</a>
+    </p>
+  </div>
+  <div class="footer">
+    &copy; 2026 THOTH – India's VPS, VPN & Security | RA ATUM Infrastructure
+  </div>
+
+  <script src="js/thoth-vps-vpn.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Help Center & Troubleshooting – RA Atum</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/troubleshooting.css">
+
+</head>
+<body>
+  <!-- Logo with wallet-style big boundaries -->
+  <div class="ra-logo-glow">
+    <img src="RA-ATUM-LOGO.png" alt="RA Atum Logo">
+  </div>
+  <div class="help-title">RA Atum Help Center</div>
+  <div class="help-center-container">
+
+    <!-- 1. Intro -->
+    <div class="accordion-section">
+      <button class="accordion-header active"><span class="accordion-arrow"><i class="fa-solid fa-chevron-right"></i></span>Welcome to RA Atum Troubleshooting</button>
+      <div class="accordion-content active">
+        <b>Encountering an issue?</b> This guide covers the RA ATUM HEKA127 working testnet, native assets, finalized explorer evidence, and node-operator access.<br><br>
+        <ul>
+          <li>Check the network name and chain ID</li>
+          <li>Validate RA and RAK ledger activity</li>
+          <li>Troubleshoot explorer and validator status</li>
+          <li>Find support contacts and safe next steps</li>
+        </ul>
+        <div style="margin:16px 0 6px 0; color:var(--blue-glow); font-weight:600;">Let’s keep your experience smooth and rewarding!</div>
+      </div>
+    </div>
+
+    <!-- 2. Wallet & Asset Issues -->
+    <div class="accordion-section">
+      <button class="accordion-header"><span class="accordion-arrow"><i class="fa-solid fa-wallet"></i></span>Wallet & Asset Issues</button>
+      <div class="accordion-content">
+        <b>Before using a RA ATUM wallet, confirm:</b>
+        <ul>
+          <li>The network is RA ATUM HEKA127</li>
+          <li>The chain ID is 127</li>
+          <li>The address format is <code>ra</code> followed by 40 lowercase hexadecimal characters</li>
+        </ul>
+        <b>Asset not showing?</b>
+        <ul>
+          <li>RA is the native gas asset with 0 decimals and has no contract address</li>
+          <li>RAK is the separate RA KIDS ledger asset with 0 decimals and has no contract address</li>
+          <li>Check only finalized activity in the RA ATUM Explorer</li>
+        </ul>
+        <b>Failed or unknown transaction?</b>
+        <ul>
+          <li>Ensure the sender has enough native RA for gas</li>
+          <li>RAK activity currently follows a fixed 1 RA gas policy</li>
+          <li>A missing record remains Unknown until finalized evidence exists</li>
+        </ul>
+        <div class="email-support"><i class="fa-solid fa-envelope"></i>Need help? <a href="mailto:info@ra-atum.com" style="color:var(--blue);">Email us</a></div>
+      </div>
+    </div>
+
+    <!-- 3. HEKA127 & Validator Issues -->
+    <div class="accordion-section">
+      <button class="accordion-header"><span class="accordion-arrow"><i class="fa-solid fa-brain"></i></span>HEKA127 & Validator Issues</button>
+      <div class="accordion-content">
+        <b>Qualification or validator state not advancing?</b>
+        <ul>
+          <li>Confirm the node is registered as a candidate</li>
+          <li>Review HEKA127 qualification evidence and approval state</li>
+          <li>Validator admission is fail-closed: incomplete evidence does not become approval</li>
+          <li>Never submit or share private keys with support</li>
+        </ul>
+        <div class="email-support"><i class="fa-solid fa-envelope"></i>Contact: <a href="mailto:info@ra-atum.com" style="color:var(--blue);">info@ra-atum.com</a></div>
+      </div>
+    </div>
+
+    <!-- 4. Account & Access Issues -->
+    <div class="accordion-section">
+      <button class="accordion-header"><span class="accordion-arrow"><i class="fa-solid fa-user-lock"></i></span>Account & Access</button>
+      <div class="accordion-content">
+        <b>Problems accessing a network surface?</b>
+        <ul>
+          <li>Make sure your browser is up-to-date (Chrome, Firefox recommended)</li>
+          <li>On mobile, retry with a current browser and stable connection</li>
+          <li>Disable conflicting extensions, clear your cache, and retry</li>
+          <li>Check the network, chain ID, and RA address format</li>
+        </ul>
+        <div class="telegram-support"><i class="fa-brands fa-telegram"></i>Telegram: <a href="https://t.me/supportraatum" style="color:var(--blue-glow);" target="_blank">@supportraatum</a></div>
+      </div>
+    </div>
+
+    <!-- 5. Dashboard & Analytics -->
+    <div class="accordion-section">
+      <button class="accordion-header"><span class="accordion-arrow"><i class="fa-solid fa-chart-line"></i></span>Dashboard & Analytics</button>
+      <div class="accordion-content">
+        <b>Not seeing updated data?</b>
+        <ul>
+          <li>Refresh the dashboard—data can take a few minutes to sync</li>
+          <li>Ensure the explorer is reading RA ATUM HEKA127</li>
+          <li>Compare the latest finalized height before drawing a conclusion</li>
+          <li>Contact support if issues persist</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 6. Still Need Help? -->
+    <div class="accordion-section">
+      <button class="accordion-header"><span class="accordion-arrow"><i class="fa-solid fa-headset"></i></span>Still Need Help?</button>
+      <div class="accordion-content">
+        <div style="margin-bottom:10px;"><b>Describe your issue and contact our team:</b></div>
+        <div class="email-support"><i class="fa-solid fa-envelope"></i> Email: <a href="mailto:info@ra-atum.com" style="color:var(--blue);">info@ra-atum.com</a></div>
+        <div class="telegram-support"><i class="fa-brands fa-telegram"></i> Telegram: <a href="https://t.me/supportraatum" style="color:var(--blue-glow);" target="_blank">@supportraatum</a></div>
+      </div>
+    </div>
+  </div>
+
+  <a class="back-home-btn" href="index.html"><i class="fa-solid fa-house"></i> Back to Home</a>
+
+
+  <script src="js/troubleshooting.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,174 @@
+:root {
+      --blue: #00b4fa;
+      --blue-glow: #0fffc7;
+      --sea-green: #00ffd0;
+      --bg-dark: #0e1018;
+      --sand: #e7d7b6;
+      --black: #171818;
+      --card-bg: #181a1b;
+      --accent: #00b4fa;
+      --digital-font: 'Share Tech Mono', monospace;
+    }
+    html, body {
+      margin: 0; padding: 0; min-height: 100vh;
+      font-family: var(--digital-font), monospace;
+      background: var(--bg-dark);
+      color: var(--sand);
+      overflow-x: hidden;
+    }
+    body::before {
+      content: "";
+      position: fixed; top:0; left:0; right:0; bottom:0;
+      background: linear-gradient(120deg, #101015dd 0%, #1d2b3add 100%);
+      z-index: 0; pointer-events: none; opacity: 0.87;
+      mix-blend-mode: multiply;
+    }
+    /* Logo section: use wallet style for big logo */
+    .ra-logo-glow {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 50px 0 30px 0;
+    }
+    .ra-logo-glow img {
+      width: 168px;
+      height: 168px;
+      max-width: 35vw;
+      border-radius: 35px;
+      object-fit: contain;
+      background: #191b2a;
+      box-shadow: 0 8px 48px #00b4fa88, 0 0 0 7px #191a2477;
+      border: 3px solid #00b4fa44;
+      margin-top: 8px;
+      margin-left: 8px;
+      display: block;
+      transition: transform .22s;
+    }
+    .ra-logo-glow img:hover {
+      transform: scale(1.04) rotate(-2deg);
+      box-shadow: 0 18px 68px #00b4faaa, 0 0 0 12px #191a24bb;
+    }
+    .help-title {
+      text-align: center;
+      color: var(--blue);
+      font-size: 2.6rem;
+      letter-spacing: 1.5px;
+      margin-bottom: 13px;
+      text-shadow: 0 2px 20px #0fffc755;
+      font-family: var(--digital-font), monospace;
+      background: linear-gradient(90deg,#fff 8%,#00b4fa 60%,#23e6ff 98%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-shadow: 0 2px 18px #22213866,0 0 8px #00b4fa88,0 0 18px #00b4fa99;
+      filter: brightness(1.15) drop-shadow(0 0 3px #00e6ff99);
+      min-height: 1.7em;
+    }
+    .help-center-container {
+      max-width: 780px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      border-radius: 20px;
+      box-shadow: 0 8px 32px #00b4fa33;
+      padding: 36px 22px 22px 22px;
+      position: relative;
+      z-index: 2;
+      border: 2px solid #00b4fa;
+      margin-bottom: 38px;
+    }
+    .accordion-section {
+      margin-bottom: 26px;
+      border-radius: 13px;
+      overflow: hidden;
+      border: 1.5px solid #00b4fa99;
+      background: #181a1b;
+      box-shadow: 0 2px 10px #00b4fa22;
+    }
+    .accordion-header {
+      cursor: pointer;
+      padding: 19px 16px 19px 23px;
+      font-size: 1.19rem;
+      color: var(--blue);
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      border: none;
+      background: none;
+      outline: none;
+      transition: background 0.15s;
+      user-select: none;
+      letter-spacing: 0.4px;
+    }
+    .accordion-header:hover {
+      background: #232b4480;
+    }
+    .accordion-arrow {
+      margin-right: 13px;
+      font-size: 1.17em;
+      transition: transform 0.28s cubic-bezier(.59,1.2,.48,1.1);
+    }
+    .accordion-header.active .accordion-arrow {
+      transform: rotate(90deg) scale(1.21);
+      color: var(--blue-glow);
+    }
+    .accordion-content {
+      padding: 10px 24px 19px 46px;
+      display: none;
+      color: var(--sand);
+      font-size: 1.05rem;
+      line-height: 1.73;
+      background: none;
+      border-top: 1.2px solid #00b4fa33;
+      animation: fadeIn 0.36s;
+    }
+    .accordion-content.active {
+      display: block;
+      animation: fadeIn 0.46s;
+    }
+    @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
+    .email-support, .telegram-support {
+      margin-top: 14px; font-size: 1.12rem;
+      color: var(--blue-glow);
+      display: flex; align-items: center; gap: 9px;
+      font-weight: bold;
+    }
+    .email-support i, .telegram-support i {
+      font-size: 1.25em;
+      margin-right: 5px;
+      color: var(--blue);
+    }
+
+    /* Back to Home button exactly like wallet */
+    .back-home-btn {
+      margin: 36px auto 0 auto;
+      background: linear-gradient(90deg, #00b4fa 0%, #00ffd0 100%);
+      color: #181a1b;
+      border: none;
+      border-radius: 9px;
+      padding: 12px 30px;
+      font-size: 1.08em;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 2px 18px #00b4fa33;
+      transition: background .17s, color .17s, transform .12s;
+      font-family: 'Share Tech Mono', monospace;
+      letter-spacing: 1.1px;
+      display: block;
+      max-width: 240px;
+      text-align: center;
+      text-decoration: none;
+      outline: none;
+    }
+    .back-home-btn:hover {
+      background: #e7d7b6;
+      color: #002a37;
+      transform: scale(1.04);
+    }
+    @media (max-width: 850px) {
+      .ra-logo-glow img { width: 95px; height: 95px; }
+      .help-center-container { padding: 19px 4vw 14px 4vw; }
+      .help-title { font-size: 1.45rem; }
+      .accordion-header { font-size: 1.02rem; padding: 15px 8px 15px 17px; }
+      .accordion-content { font-size: 0.98rem; padding-left: 24px; }
+      .back-home-btn { font-size: 0.99em; padding: 11px 16px;}
+    }

@@ -1,0 +1,435 @@
+:root {
+      --sand: #e7d7b6;
+      --sand-dark: #bda76a;
+      --sand-bg: #f6e7c1;
+      --blue: #00b4fa;
+      --blue-dark: #004aad;
+      --black: #171818;
+      --card-bg: #232224e6;
+      --main-bg: linear-gradient(120deg, #101015 0%, #22212a 65%, #1d2b3a 100%);
+      --text-main: #f6e7c1;
+      --text-light: #00b4fa;
+      --accent: #00b4fa;
+      --accent2: #e7d7b6;
+      --digital-font: 'Share Tech Mono', monospace;
+    }
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      min-height: 100vh;
+      width: 100vw;
+      position: relative;
+      color: var(--text-main);
+      font-family: var(--digital-font), monospace !important;
+      background: url('https://e1.pxfuel.com/desktop-wallpaper/767/930/desktop-wallpaper-printed-circuit-board-video-motherboard-blue-and-purple-digital-circuit-board-background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      background-attachment: fixed;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top:0; left:0; right:0; bottom:0;
+      background: linear-gradient(115deg, #0c0c10bb 0%, #191a24b7 90%);
+      z-index: 0;
+      pointer-events: none;
+      opacity: 0.85;
+      mix-blend-mode: multiply;
+    }
+    * { font-family: var(--digital-font), monospace !important; }
+    header {
+      position: sticky; top: 0;
+      width: 100%;
+      background: rgba(23, 22, 22, 0.99);
+      box-shadow: 0 2px 18px #00b4fa44;
+      z-index: 100;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 16px 3vw;
+      min-height: 62px;
+      transition: padding 0.2s, min-height 0.2s;
+    }
+    nav {
+      display: flex;
+      gap: 16px;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      z-index: 102;
+    }
+    nav a {
+      color: var(--blue);
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 1rem;
+      border-radius: 7px;
+      padding: 10px 16px;
+      transition: background .19s, color .19s, font-size .19s, padding .19s;
+      letter-spacing: 0.5px;
+      line-height: 1.1;
+      cursor: pointer;
+      background: none;
+    }
+    nav a:hover {
+      background: var(--sand-dark);
+      color: var(--black);
+    }
+    .hamburger {
+      display: none;
+      cursor: pointer;
+      font-size: 2rem;
+      background: none;
+      border: none;
+      color: var(--blue);
+      z-index: 110;
+      margin-right: 6px;
+      margin-left: 0;
+    }
+    .mobile-nav-overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; width: 100vw; height: 100vh;
+      background: rgba(18,18,22,0.99);
+      z-index: 1200;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      transition: opacity 0.2s;
+    }
+    .mobile-nav-overlay.active {
+      display: flex !important;
+    }
+    .mobile-nav {
+      display: flex;
+      flex-direction: column;
+      width: 100vw;
+      margin-top: 60px;
+      gap: 6px;
+    }
+    .mobile-nav a {
+      color: var(--blue);
+      background: none;
+      text-align: left;
+      font-size: 1.55rem;
+      padding: 22px 24px;
+      border-radius: 0;
+      width: 100%;
+      display: block;
+      border-bottom: 1px solid #203860;
+      transition: background 0.14s, color 0.14s;
+      font-weight: 700;
+      letter-spacing: 0.7px;
+    }
+    .mobile-nav a:last-child { border-bottom: none;}
+    .mobile-nav a:hover {
+      background: var(--sand-dark);
+      color: var(--black);
+    }
+    .mobile-nav-close {
+      position: absolute;
+      right: 24px; top: 18px;
+      background: none;
+      border: none;
+      font-size: 2.6rem;
+      color: var(--blue);
+      cursor: pointer;
+    }
+    @media (max-width: 800px) {
+      nav { display: none; }
+      .hamburger { display: block; }
+      header {
+        min-height: 62px;
+        padding: 7px 2vw 7px 2vw;
+        justify-content: flex-start;
+      }
+    }
+    @media (max-width: 500px) {
+      .mobile-nav a {
+        font-size: 1.17rem;
+        padding: 14px 14px;
+      }
+    }
+    /* NFT SECTION VIDEO BG */
+    .nft-bg-video-container {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      z-index: 0;
+      overflow: hidden;
+      border-radius: 18px;
+      pointer-events: none;
+    }
+    .nft-bg-video-container video {
+      width: 100vw;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0; left: 0;
+      opacity: 0.18;
+      pointer-events: none;
+    }
+    section.nft-gallery-section {
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+    section {
+      max-width: 970px;
+      margin: 56px auto;
+      background: var(--highlight-bg);
+      border-radius: 18px;
+      box-shadow: 0 4px 28px #00b4fa44;
+      padding: 36px 20px 30px 20px;
+      position: relative;
+      z-index: 2;
+      font-family: var(--digital-font), monospace;
+      border: 2px solid #00b4fa;
+    }
+    h2 {
+      text-align: center;
+      color: var(--blue);
+      margin-bottom: 28px;
+      font-size: 2rem;
+      letter-spacing: 1px;
+      font-family: var(--digital-font), monospace;
+      background: linear-gradient(90deg, #fff 8%, #00b4fa 60%, #23e6ff 98%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-shadow: 0 2px 18px #22213866, 0 0 8px #00b4fa88, 0 0 18px #00b4fa99;
+      filter: brightness(1.13) drop-shadow(0 0 3px #00e6ffbb);
+    }
+    /* NFT GRID STYLES */
+    .nft-gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 28px;
+      padding: 20px 0;
+      justify-items: center;
+      align-items: stretch;
+      z-index: 2;
+    }
+    .nft-card {
+      background: var(--card-bg);
+      border-radius: 15px;
+      box-shadow: 0 0 18px 4px #00e6ff88, 0 0 12px #00b4fa55;
+      padding: 22px 12px 18px 12px;
+      text-align: center;
+      width: 230px;
+      border: 2.5px solid #00e6ff99;
+      animation: float 3.6s ease-in-out infinite;
+      font-family: var(--digital-font), monospace;
+      transition: transform .19s, box-shadow .19s, border-color .19s;
+      position: relative;
+      min-height: 320px;
+      overflow: hidden;
+      /* Glow on hover! */
+    }
+    .nft-card:hover {
+      transform: scale(1.04) translateY(-7px);
+      box-shadow: 0 0 32px 8px #0fffc799, 0 0 18px #00b4fa77;
+      border-color: #0fffc7;
+      z-index: 3;
+    }
+    .nft-card img {
+      width: 100%;
+      max-width: 170px;
+      max-height: 170px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 12px;
+      box-shadow: 0 1px 10px #004aad50, 0 0 16px #0fffc766;
+      background: #191a24;
+      filter: drop-shadow(0 0 12px #00b4fa77);
+      transition: filter 0.16s;
+    }
+    .nft-card:hover img {
+      filter: drop-shadow(0 0 20px #0fffc7cc) brightness(1.11);
+    }
+    .nft-card h3 {
+      color: var(--blue-dark);
+      font-size: 1.13em;
+      font-weight: 700;
+      margin: 6px 0 4px 0;
+      font-family: var(--digital-font), monospace;
+    }
+    .nft-card .nft-meta {
+      color: var(--sand-dark);
+      font-size: 0.99em;
+      margin-bottom: 6px;
+      letter-spacing: 0.1em;
+    }
+    .nft-card .nft-desc {
+      color: var(--sand);
+      font-size: 0.96em;
+      margin-bottom: 4px;
+      min-height: 46px;
+    }
+    .nft-card .nft-link {
+      display: inline-block;
+      margin-top: 7px;
+      font-size: 1.05em;
+      color: var(--blue);
+      text-decoration: underline;
+      transition: color .15s;
+    }
+    .nft-card .nft-link:hover {
+      color: var(--sand-dark);
+    }
+    @keyframes float {
+      0%   { transform: translateY(0px) scale(1);}
+      40%  { transform: translateY(-12px) scale(1.04);}
+      60%  { transform: translateY(-12px) scale(1.04);}
+      100% { transform: translateY(0px) scale(1);}
+    }
+    @media (max-width: 700px) {
+      .nft-gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 12px;
+      }
+      .nft-card {
+        width: 95vw;
+        max-width: 230px;
+        min-height: 210px;
+        padding: 10px 4px 15px 4px;
+      }
+    }
+    /* SUPPORT SECTION */
+    #support {
+      margin-top: 40px;
+      margin-bottom: 0;
+      background: var(--highlight-bg);
+      box-shadow: 0 4px 16px #00b4fa1a;
+      border-radius: 18px;
+      padding: 36px 0 30px 0;
+      position: relative;
+      max-width: 670px;
+      border: 2px solid #00b4fa;
+    }
+    .support-intro-line {
+      color: var(--blue-dark);
+      font-size: 1.13rem;
+      margin: 0 0 14px 0;
+      text-align: center;
+    }
+    .support-images-zigzag {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: center;
+      width: 100%;
+      margin: 0 auto 22px auto;
+      max-width: 410px;
+    }
+    .support-img-row {
+      display: flex;
+      width: 100%;
+      justify-content: flex-start;
+      transition: transform .9s cubic-bezier(.5,1.6,.35,1.01), opacity .7s cubic-bezier(.5,1.6,.35,1.01);
+      opacity: 0;
+      will-change: transform, opacity;
+    }
+    .support-img-row.right { justify-content: flex-end; }
+    .support-img-row .support-img {
+      width: 92%;
+      max-width: 222px;
+      min-width: 80px;
+      height: 88px;
+      object-fit: cover;
+      border-radius: 14px;
+      box-shadow: 0 3px 14px #004aad99;
+      margin: 0;
+      background: #222;
+      transition: box-shadow .2s;
+    }
+    /* Zig zag appear/disappear effect */
+    .support-img-row.left { transform: translateX(-90px);}
+    .support-img-row.right { transform: translateX(90px);}
+    .support-img-row.visible { opacity: 1; transform: translateX(0);}
+    .support-img-row { opacity: 0;}
+    /* Make rows closer together */
+    .support-img-row { margin-bottom: 6px; }
+    /* FAQ */
+    #support h3 {
+      color: var(--blue);
+      font-size: 1.15rem;
+      margin: 20px 0 8px 0;
+      text-align: center;
+      letter-spacing: 0.8px;
+    }
+    #support ul {
+      list-style: disc;
+      padding-left: 26px;
+      color: var(--sand-dark);
+      font-size: 1.08rem;
+      margin-bottom: 0;
+    }
+    #support ul li {
+      margin-bottom: 5px;
+      cursor: pointer;
+      color: var(--blue);
+      text-decoration: underline;
+      transition: color 0.16s;
+    }
+    #support ul li:hover {
+      color: var(--sand-dark);
+      text-shadow: 0 0 6px #00b4fa77;
+    }
+    /* Mobile: all support images slide up and fade in */
+    @media (max-width: 650px) {
+      .support-images-zigzag {
+        max-width: 99vw;
+        gap: 8px;
+      }
+      .support-img-row {
+        justify-content: center !important;
+        transform: translateY(48px) !important;
+      }
+      .support-img-row.visible {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+      }
+      .support-img-row .support-img {
+        height: 70px;
+        max-width: 94vw;
+      }
+    }
+    /* Popup modal style for FAQ & Issues */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      top:0; left:0; right:0; bottom:0;
+      background: rgba(18,24,34,0.85);
+      justify-content: center;
+      align-items: center;
+      pointer-events: auto;
+    }
+    .modal-overlay.active { display: flex; }
+    .modal-content {
+      background: #181b23;
+      color: var(--blue);
+      padding: 32px 24px 24px 24px;
+      border-radius: 14px;
+      max-width: 420px;
+      width: 95vw;
+      box-shadow: 0 0 22px 8px #00b4fa88;
+      border: 2px solid #00b4fa;
+      position: relative;
+      text-align: left;
+      font-size: 1.13rem;
+    }
+    .modal-close {
+      position: absolute;
+      right: 14px; top: 10px;
+      color: #00b4fa;
+      background: none;
+      border: none;
+      font-size: 1.6em;
+      cursor: pointer;
+      z-index: 3;
+    }

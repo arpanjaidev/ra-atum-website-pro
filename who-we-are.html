@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Who We Are – RA ATUM</title>
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#101015">
+
+
+  <link rel="stylesheet" href="css/who-we-are.css">
+
+</head>
+<body>
+<header>
+  <a class="back" href="index.html">⟵ Back to Home</a>
+  <button id="connectBtn" class="connect-btn" type="button">
+    <span class="dot"></span><span id="connectText">Working Testnet</span>
+  </button>
+</header>
+
+<main>
+
+  <!-- 1) PROFILE / TEAM (first) -->
+  <section class="card">
+    <div class="holo-grid">
+      <!-- PROFILE -->
+      <aside class="profile-panel">
+        <div class="profile-title"><span class="dot"></span><span>RA ATUM SYSTEM</span></div>
+
+        <div class="avatar-wrap">
+          <div class="avatar"><img id="p-photo" alt="Profile Photo"></div>
+        </div>
+
+        <div class="kv">
+          <b>Role</b>     <span id="p-role">Founder</span>
+          <b>Name</b>     <span id="p-name">Arpan Jaidev</span>
+          <b>Focus</b>    <span id="p-focus">Architecture &amp; Network Direction</span>
+          <b>Stack</b>    <span id="p-stack">C++ · Consensus · HEKA127</span>
+          <b>Origin</b>   <span id="p-loc">Made in India</span>
+        </div>
+
+        <div class="divider"></div>
+        <div style="display:grid; gap:10px;">
+          <div><div style="display:flex; justify-content:space-between; font-size:.9rem;"><span>Blockchain</span><span id="s1v">92%</span></div><div class="bar"><span id="s1" style="width:92%"></span></div></div>
+          <div><div style="display:flex; justify-content:space-between; font-size:.9rem;"><span>Backend</span><span id="s2v">60%</span></div><div class="bar"><span id="s2" style="width:60%"></span></div></div>
+          <div><div style="display:flex; justify-content:space-between; font-size:.9rem;"><span>Security</span><span id="s3v">70%</span></div><div class="bar"><span id="s3" style="width:70%"></span></div></div>
+        </div>
+
+        <div class="chips" id="p-tags">
+          <span class="chip">Architecture</span><span class="chip">Layer-1</span><span class="chip">HEKA127</span><span class="chip">Roadmap</span>
+        </div>
+      </aside>
+
+      <!-- HOLOGRAM STAGE -->
+      <div class="stage" id="stage">
+        <div class="ring-top"></div>
+        <div class="scanlines"></div>
+        <div class="character" id="char">
+          <!-- Default CEO hologram so it shows even if JS is blocked -->
+          <svg viewBox="0 0 360 480" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" id="svg-ceo">
+            <defs>
+              <linearGradient id="ceoLine" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffd255" stop-opacity="0.9"/><stop offset="1" stop-color="white" stop-opacity="0.85"/></linearGradient>
+              <filter id="ceoGlow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2.6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+            </defs>
+            <g stroke="url(#ceoLine)" stroke-width="2.2" fill="none" filter="url(#ceoGlow)">
+              <circle cx="180" cy="120" r="28"/><path d="M145,160 L215,160 L230,240 L130,240 Z"/><path d="M180,160 L175,200 L185,200 Z"/>
+              <path d="M130,200 L90,230"/><path d="M230,200 L270,230"/><path d="M160,240 L160,340"/><path d="M200,240 L200,340"/><path d="M150,340 L170,340"/><path d="M190,340 L210,340"/>
+            </g>
+            <ellipse cx="180" cy="400" rx="120" ry="24" fill="#ffd255" fill-opacity=".25"/><ellipse cx="180" cy="86" rx="130" ry="22" fill="#ffd255" fill-opacity=".15"/>
+          </svg>
+        </div>
+        <div class="ring-base"></div>
+      </div>
+
+      <!-- SWITCHER -->
+      <nav class="switcher">
+        <button class="role-btn active" onclick="selectRole(0)"><span>Founder</span><small>Arpan Jaidev</small></button>
+        <button class="role-btn" onclick="selectRole(1)"><span>Layer-1 Core</span><small>C++ Architecture</small></button>
+        <button class="role-btn" onclick="selectRole(2)"><span>HEKA127</span><small>Operating Brain</small></button>
+        <button class="role-btn" onclick="selectRole(3)"><span>Validator Network</span><small>Finality &amp; Evidence</small></button>
+        <button class="role-btn" onclick="selectRole(4)"><span>RA KIDS</span><small>RAK Activity</small></button>
+      </nav>
+    </div>
+  </section>
+
+  <!-- 2) WHO WE ARE (second) -->
+  <section class="card">
+    <h1>Who We Are</h1>
+    <p class="lead"><b>Made in India. Architecture first.</b><br>
+      RA ATUM is an original Layer-1 blockchain project founded by Arpan Jaidev. Its C++ core defines the ledger, native assets, address format, validator membership, and finalized state as one coherent architecture.<br><br>
+      HEKA127 is the network’s Operating Brain. It evaluates evidence and records reasoned advice, while signed validator membership and consensus remain authoritative. HEKA127 does not hold private keys and incomplete evidence fails closed.<br><br>
+      The current RA ATUM HEKA127 environment is a controlled working testnet with a five-validator topology. Native RA pays gas. The separate RAK ledger asset supports RA KIDS activity across games, shopping, and learning.<br><br>
+      The explorer is read-only evidence: finalized records can be cited, while a missing record remains Unknown. This separation between advice, authority, and evidence is the foundation of the RA ATUM platform.
+    </p>
+  </section>
+
+  <footer>
+    &copy; 2026 RA ATUM • Intelligent Blockchain Operating Platform
+    <div><a class="cta" href="index.html">Back to Main</a></div>
+  </footer>
+</main>
+
+<!-- HIDDEN SVG TEMPLATES FOR OTHER ROLES -->
+<div id="svg-templates" style="display:none;">
+  <svg id="svg-tech" viewBox="0 0 360 480" xmlns="http://www.w3.org/2000/svg"><defs>
+    <linearGradient id="techLine" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5cffc0" stop-opacity="0.9"/><stop offset="1" stop-color="white" stop-opacity="0.85"/></linearGradient>
+    <filter id="techGlow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2.6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <g stroke="url(#techLine)" stroke-width="2.2" fill="none" filter="url(#techGlow)">
+    <circle cx="180" cy="120" r="26"/><circle cx="162" cy="120" r="6"/><circle cx="198" cy="120" r="6"/><path d="M156,120 Q180,105 204,120"/>
+    <path d="M140,160 Q180,130 220,160 L235,215 Q180,240 125,215 Z"/><rect x="225" y="210" width="40" height="30" rx="4"/>
+    <path d="M220,200 L238,215"/><path d="M238,215 L230,235"/><path d="M140,200 L120,230"/><path d="M165,240 L165,350"/><path d="M195,240 L195,350"/>
+  </g><ellipse cx="180" cy="400" rx="120" ry="24" fill="#5cffc0" fill-opacity=".25"/><ellipse cx="180" cy="86" rx="130" ry="22" fill="#5cffc0" fill-opacity=".15"/></svg>
+
+  <svg id="svg-dev" viewBox="0 0 360 480" xmlns="http://www.w3.org/2000/svg"><defs>
+    <linearGradient id="devLine" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff7cf1" stop-opacity="0.9"/><stop offset="1" stop-color="white" stop-opacity="0.85"/></linearGradient>
+    <filter id="devGlow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2.6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <g stroke="url(#devLine)" stroke-width="2.2" fill="none" filter="url(#devGlow)">
+    <circle cx="180" cy="120" r="26"/><rect x="160" y="112" width="40" height="12" rx="6"/>
+    <path d="M150,160 L210,160 L220,235 L140,235 Z"/><rect x="100" y="210" width="34" height="20" rx="3"/>
+    <path d="M140,200 L110,220"/><path d="M220,200 L255,230"/><path d="M170,235 L170,345"/><path d="M190,235 L190,345"/>
+  </g><ellipse cx="180" cy="400" rx="120" ry="24" fill="#ff7cf1" fill-opacity=".25"/><ellipse cx="180" cy="86" rx="130" ry="22" fill="#ff7cf1" fill-opacity=".15"/></svg>
+
+  <svg id="svg-ops" viewBox="0 0 360 480" xmlns="http://www.w3.org/2000/svg"><defs>
+    <linearGradient id="opsLine" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#23e6ff" stop-opacity="0.9"/><stop offset="1" stop-color="white" stop-opacity="0.85"/></linearGradient>
+    <filter id="opsGlow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2.6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <g stroke="url(#opsLine)" stroke-width="2.2" fill="none" filter="url(#opsGlow)">
+    <circle cx="180" cy="120" r="26"/><rect x="130" y="160" width="100" height="60" rx="10"/>
+    <path d="M145,160 L215,160 L230,235 L130,235 Z"/><path d="M225,200 L265,185 L270,190 L230,205 Z"/><circle cx="267" cy="187" r="6"/>
+    <path d="M130,200 L90,230"/><path d="M165,235 L165,350"/><path d="M195,235 L195,350"/>
+  </g><ellipse cx="180" cy="400" rx="120" ry="24" fill="#23e6ff" fill-opacity=".25"/><ellipse cx="180" cy="86" rx="130" ry="22" fill="#23e6ff" fill-opacity=".15"/></svg>
+
+  <svg id="svg-comms" viewBox="0 0 360 480" xmlns="http://www.w3.org/2000/svg"><defs>
+    <linearGradient id="comLine" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8f8cff" stop-opacity="0.9"/><stop offset="1" stop-color="white" stop-opacity="0.85"/></linearGradient>
+    <filter id="comGlow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2.6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <g stroke="url(#comLine)" stroke-width="2.2" fill="none" filter="url(#comGlow)">
+    <circle cx="180" cy="120" r="26"/><path d="M150,160 L210,160 L220,230 L140,230 Z"/>
+    <path d="M170,125 L150,135"/><circle cx="146" cy="137" r="4"/>
+    <path d="M225,200 L260,195 L264,208 L228,210 Z"/><line x1="260" y1="195" x2="280" y2="180"/>
+    <path d="M220,200 L230,210"/><path d="M140,200 L120,230"/><path d="M170,230 L170,345"/><path d="M190,230 L190,345"/>
+  </g><ellipse cx="180" cy="400" rx="120" ry="24" fill="#8f8cff" fill-opacity=".25"/><ellipse cx="180" cy="86" rx="130" ry="22" fill="#8f8cff" fill-opacity=".15"/></svg>
+</div>
+
+
+  <script src="js/who-we-are.js"></script>
+
+</body>
+</html>

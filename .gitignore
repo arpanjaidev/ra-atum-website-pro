@@ -1,0 +1,5 @@
+
+# Local backups and editor files
+*.bak
+*.bak-*
+.DS_Store

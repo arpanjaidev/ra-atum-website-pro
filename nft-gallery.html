@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NFT Gallery – RA Atum</title>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Digital font for all text -->
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/nft-gallery.css">
+
+</head>
+<body>
+  <header>
+    <button class="hamburger" id="hamburger-btn" aria-label="Open menu">
+      <i class="fas fa-bars"></i>
+    </button>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="nft-gallery.html">NFT Gallery</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="wallet.html">RA Wallet</a>
+      <!-- Support removed from header/nav -->
+    </nav>
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay">
+      <button class="mobile-nav-close" id="close-mobile-nav" aria-label="Close menu">&times;</button>
+      <div class="mobile-nav">
+        <a href="index.html" onclick="closeMobileNav()">Home</a>
+        <a href="nft-gallery.html" onclick="closeMobileNav()">NFT Gallery</a>
+        <a href="#about" onclick="closeMobileNav()">About</a>
+        <a href="#contact" onclick="closeMobileNav()">Contact</a>
+        <a href="wallet.html">RA Wallet</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- NFT SECTION with video background -->
+  <section class="nft-gallery-section">
+    <div class="nft-bg-video-container">
+      <video autoplay loop muted playsinline>
+        <source src="https://videos.pexels.com/video-files/3191573/3191573-uhd_2560_1440_25fps.mp4" type="video/mp4">
+      </video>
+    </div>
+    <h2>NFT Gallery</h2>
+    <div class="nft-gallery-grid">
+      <!-- NFT 1 -->
+      <div class="nft-card">
+        <img src="https://i.pinimg.com/736x/9d/92/93/9d9293c4b9b8e4d2f6de30d7672f49b3.jpg" alt="NFT Art 1" />
+        <h3>Sunrise Guardian</h3>
+        <div class="nft-meta">Edition #1</div>
+        <div class="nft-desc">A concept collectible representing the first finalized sunrise on the RA ATUM working testnet.</div>
+        <a href="network.html" class="nft-link">View Details</a>
+      </div>
+      <!-- NFT 2 -->
+      <div class="nft-card">
+        <img src="https://i.pinimg.com/736x/f3/ae/5a/f3ae5accc97cc3dca9a67a9e2b3da5a7.jpg" alt="NFT Art 2" />
+        <h3>Token of Kindness</h3>
+        <div class="nft-meta">Edition #2</div>
+        <div class="nft-desc">A RA KIDS concept collectible connecting learning, games, shopping, and recorded RAK activity.</div>
+        <a href="ra-kids.html" class="nft-link">View Details</a>
+      </div>
+      <!-- NFT 3 -->
+      <div class="nft-card">
+        <img src="https://i.pinimg.com/736x/c6/cc/8a/c6cc8a4e9d9439c9e33dfac4e9f6a206.jpg" alt="NFT Art 3" />
+        <h3>Light the Way</h3>
+        <div class="nft-meta">Edition #3</div>
+        <div class="nft-desc">A visual tribute to validator evidence that moves from candidate state to finalized network record.</div>
+        <a href="validators.html" class="nft-link">View Details</a>
+      </div>
+      <!-- NFT 4 -->
+      <div class="nft-card">
+        <img src="https://i.pinimg.com/736x/60/2c/1f/602c1f96810431545ce73f996edbef8a.jpg" alt="NFT Art 4" />
+        <h3>Circle of Support</h3>
+        <div class="nft-meta">Edition #4</div>
+        <div class="nft-desc">A concept symbol for the controlled five-validator topology currently exercising finality.</div>
+        <a href="explorer.html" class="nft-link">View Details</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUPPORT SECTION -->
+  <section id="support">
+    <h2>Support</h2>
+    <div class="support-intro-line">
+      Need support? We're always ready to help! Email: <a href="mailto:info@ra-atum.com" style="color:var(--blue);">info@ra-atum.com</a>
+    </div>
+    <div class="support-images-zigzag" id="support-images-zigzag">
+      <div class="support-img-row left">
+        <img class="support-img" src="https://i.pinimg.com/736x/28/06/5d/28065dcf16a002eb06e58710d37471f3.jpg" alt="Support 1">
+      </div>
+      <div class="support-img-row right">
+        <img class="support-img" src="https://i.pinimg.com/736x/dc/51/02/dc5102b6680502d579fafdb751437f46.jpg" alt="Support 2">
+      </div>
+      <div class="support-img-row left">
+        <img class="support-img" src="https://i.pinimg.com/736x/2b/da/43/2bda43c60948f02fe9142675eda42284.jpg" alt="Support 3">
+      </div>
+      <div class="support-img-row right">
+        <img class="support-img" src="https://i.pinimg.com/736x/1e/f7/15/1ef715518bfdfe0355a3f51b875b933d.jpg" alt="Support 4">
+      </div>
+    </div>
+    <h3>FAQ & Troubleshooting</h3>
+    <ul>
+      <li onclick="openModal('faq')">Frequently Asked Questions</li>
+      <li onclick="openModal('issues')">Common Issues & Solutions</li>
+    </ul>
+  </section>
+
+  <!-- About & Contact anchors for nav compatibility -->
+  <section id="about" style="background:none;box-shadow:none;padding:0;margin:0;max-width:none;"></section>
+  <section id="contact" style="background:none;box-shadow:none;padding:0;margin:0;max-width:none;"></section>
+
+  <!-- FAQ & ISSUES MODALS -->
+  <div id="faq-modal" class="modal-overlay" onclick="closeModal(event)">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal(event)">&times;</button>
+      <h3>Frequently Asked Questions</h3>
+      <ul>
+        <li>Are these RA ATUM collectibles live on the working testnet?</li>
+        <li>How does RA KIDS use finalized RAK activity?</li>
+        <li>Where can I verify canonical network evidence?</li>
+        <li>What does controlled testnet mean?</li>
+      </ul>
+      <p style="margin-top:1em;color:var(--sand-dark);">For more detailed answers, contact our team!</p>
+    </div>
+  </div>
+  <div id="issues-modal" class="modal-overlay" onclick="closeModal(event)">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal(event)">&times;</button>
+      <h3>Common Issues & Solutions</h3>
+      <ul>
+        <li>Address rejected? Confirm <code>ra</code> plus 40 lowercase hexadecimal characters.</li>
+        <li>Activity missing? Check the latest finalized height; not-found remains Unknown.</li>
+        <li>Still stuck? Email <a href="mailto:info@ra-atum.com" style="color:var(--blue);">info@ra-atum.com</a></li>
+      </ul>
+    </div>
+  </div>
+
+
+  <script src="js/nft-gallery.js"></script>
+
+</body>
+</html>

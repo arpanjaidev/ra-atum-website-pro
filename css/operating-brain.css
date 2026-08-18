@@ -1,0 +1,310 @@
+:root {
+      --blue: #00b4fa;
+      --sand: #e7d7b6;
+      --bg-dark: #10151b;
+      --card-bg: #192332e6;
+      --glow: 0 0 24px #00b4fa55, 0 2px 32px #00b4fa33;
+      --shine-grad: linear-gradient(90deg, #fff 8%, #00b4fa 60%, #23e6ff 98%);
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Share Tech Mono', monospace;
+      background: var(--bg-dark);
+      color: var(--sand);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    .heka-status-line {
+      background: linear-gradient(90deg,#161d29 60%,#202b3e 100%);
+      border: 2px solid #00b4fa;
+      border-radius: 16px;
+      max-width: 780px;
+      margin: 38px auto 28px auto;
+      padding: 17px 32px;
+      color: #fff;
+      box-shadow: var(--glow);
+      text-align: center;
+      font-size: 1.15em;
+      font-weight: bold;
+      letter-spacing: 0.7px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      position: relative;
+    }
+    .heka-status-line i {
+      color: #00b4fa;
+      font-size: 2em;
+      margin-right: 10px;
+      filter: drop-shadow(0 2px 12px #00b4fa99);
+    }
+    .main-flex {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding: 22px 4vw 50px 4vw;
+      gap: 54px;
+    }
+    .main-content { flex: 2; min-width: 320px; max-width: 760px; }
+
+    /* IMAGE STACK EFFECT WITH EVEN BIGGER GAP */
+    .image-stack {
+      flex: 1;
+      min-width: 370px;
+      max-width: 460px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      position: relative;
+      margin-top: 16px;
+    }
+    .image-layer {
+      position: relative;
+      height: 240vh;           /* much taller! */
+      margin-bottom: -170vh;   /* even bigger overlap */
+      z-index: 1;
+      pointer-events: none;
+    }
+    .image-layer:last-child { margin-bottom: 0; }
+    .image-stack img {
+      position: sticky;
+      top: 12vh;
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+      border-radius: 32px;
+      box-shadow: var(--glow);
+      border: 2.5px solid #00b4fa55;
+      background: #10151b;
+      z-index: 2;
+      transition: box-shadow 0.34s, filter 0.34s;
+      filter: grayscale(0.08) brightness(0.97);
+      background-blend-mode: multiply;
+    }
+    .image-stack img.active {
+      box-shadow: 0 18px 48px #00b4fa88, 0 1px 32px #00b4fa33;
+      filter: grayscale(0) brightness(1.07);
+      z-index: 10;
+    }
+
+    /* Responsive */
+    @media (max-width: 1100px) {
+      .main-flex { flex-direction: column-reverse; gap: 18px; }
+      .image-stack { min-width: 97vw; max-width: 100vw;}
+      .image-stack img { height: 52vw; min-height: 140px; }
+      .image-layer { height: 200vw; margin-bottom: -140vw; }
+    }
+    @media (max-width: 700px) {
+      .main-flex { padding: 4vw 1vw 28px 1vw; }
+      .image-stack img { height: 36vw; min-height: 90px;}
+      .image-layer { height: 150vw; margin-bottom: -75vw;}
+    }
+
+    /* Other content styling */
+    .highlight-block {
+      background: var(--card-bg);
+      border-radius: 19px;
+      box-shadow: var(--glow);
+      border: 2.2px solid #00b4fa66;
+      padding: 34px 27px 24px 27px;
+      margin-bottom: 36px;
+      font-size: 1.15em;
+      color: #fff;
+      font-weight: bold;
+      line-height: 1.6;
+      position: relative;
+    }
+    .hero-title {
+      font-size: 2.25rem;
+      font-weight: bold;
+      background: var(--shine-grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: 1.3px;
+      text-shadow: 0 2px 18px #22213866, 0 0 8px #00b4fa88;
+      text-align: center;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+    }
+    .section-title {
+      font-size: 1.45rem;
+      font-weight: bold;
+      background: var(--shine-grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: 1.1px;
+      text-align: center;
+      margin-bottom: 18px;
+      text-transform: uppercase;
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      margin-bottom: 35px;
+    }
+    .feature-card {
+      background: #222b36e9;
+      border-radius: 13px;
+      box-shadow: 0 4px 20px #00b4fa22;
+      border: 1.6px solid #00b4fa44;
+      padding: 24px 18px 18px 18px;
+      color: #fff;
+      font-weight: bold;
+      font-size: 1.07em;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      min-height: 110px;
+    }
+    .feature-card i {
+      font-size: 1.53em;
+      color: #00b4fa;
+      margin-top: 4px;
+      filter: drop-shadow(0 2px 8px #00b4fa44);
+      flex-shrink: 0;
+    }
+    .feature-card strong {
+      color: #00b4fa;
+      display: block;
+      margin-bottom: 2px;
+      font-size: 1.06em;
+    }
+    .center-btn-row {
+      text-align: center;
+      margin-top: 36px;
+    }
+    .buy-btn {
+      background: linear-gradient(90deg, #00b4fa 10%, #00ffd0 90%);
+      color: #181a1b;
+      font-family: 'Share Tech Mono', monospace;
+      border: none;
+      border-radius: 16px;
+      padding: 16px 46px;
+      font-size: 1.18em;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 6px 32px #00b4fa22;
+      transition: background .18s, color .17s, transform .13s;
+      letter-spacing: 1px;
+      margin-top: 0;
+      outline: none;
+      display: inline-block;
+    }
+    .buy-btn:hover {
+      background: #e7d7b6;
+      color: #002a37;
+      transform: scale(1.045);
+    }
+    .why-callout {
+      margin: 30px 0 0 0;
+      font-size: 1.15em;
+      text-align: center;
+      background: var(--shine-grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: bold;
+      letter-spacing: .7px;
+      min-height: 1.5em;
+    }
+    .back-link-bottom {
+      display: inline-block;
+      margin: 38px auto 18px auto;
+      color: #fff;
+      background: linear-gradient(90deg,#161d29 60%,#202b3e 100%);
+      border: 2.2px solid #00b4fa;
+      border-radius: 16px;
+      font-size: 1.12em;
+      font-family: 'Share Tech Mono', monospace;
+      font-weight: bold;
+      text-decoration: none;
+      padding: 12px 36px;
+      box-shadow: 0 2px 15px #00b4fa33;
+      transition: background .16s, color .13s, border .19s;
+      letter-spacing: 1.1px;
+      min-width: 150px;
+    }
+    .back-link-bottom i {
+      margin-right: 7px;
+      font-size: 1.09em;
+    }
+    .back-link-bottom:hover {
+      background: #e7d7b6;
+      color: #003a5c;
+      text-decoration: underline;
+      border-color: #e7d7b6;
+    }
+    .chatbox {
+      background: #161d29;
+      border: 2px solid #00b4fa;
+      border-radius: 20px;
+      box-shadow: var(--glow);
+      padding: 22px 18px 18px 18px;
+      margin: 36px auto 0 auto;
+      max-width: 430px;
+      min-width: 180px;
+      color: #fff;
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 1.08em;
+      position: relative;
+      z-index: 3;
+    }
+    .chatbox-title {
+      color: #00b4fa;
+      font-weight: bold;
+      font-size: 1.21em;
+      margin-bottom: 7px;
+      letter-spacing: 1px;
+      text-align: center;
+      text-transform: uppercase;
+      background: var(--shine-grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .chatbox-messages {
+      min-height: 66px;
+      max-height: 188px;
+      overflow-y: auto;
+      margin-bottom: 12px;
+      padding: 5px 1px;
+      font-size: 0.98em;
+      color: #e7d7b6;
+    }
+    .chatbox-input-row {
+      display: flex;
+      gap: 7px;
+      align-items: center;
+      margin-top: 5px;
+    }
+    .chatbox-input-row input {
+      flex: 1;
+      border-radius: 9px;
+      border: 1.5px solid #00b4fa;
+      padding: 8px 11px;
+      font-size: 1em;
+      background: #10151b;
+      color: #fff;
+      font-family: 'Share Tech Mono', monospace;
+      outline: none;
+    }
+    .chatbox-input-row button {
+      border: none;
+      background: linear-gradient(90deg, #00b4fa 10%, #00ffd0 90%);
+      color: #181a1b;
+      border-radius: 9px;
+      padding: 8px 19px;
+      font-size: 1.05em;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background .13s, color .13s;
+    }
+    .chatbox-input-row button:hover {
+      background: #e7d7b6; color: #002a37;
+    }

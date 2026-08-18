@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RA ATUM Native Asset Registry</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/tokenomics.css">
+
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html"><i class="fas fa-home"></i> Home</a>
+      <a href="index.html#features">Features</a>
+      <a href="index.html#roadmap">Roadmap</a>
+      <a href="nft-gallery.html">NFT Gallery</a>
+      <a href="index.html#about">About Us</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="tokenomics.html" style="color:#ff6ad5;">Asset Registry</a>
+    </nav>
+    <button class="hamburger" id="hamburger-btn" aria-label="Open menu">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay">
+      <button class="mobile-nav-close" id="close-mobile-nav" aria-label="Close menu">&times;</button>
+      <div class="mobile-nav">
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <a href="index.html#features">Features</a>
+        <a href="index.html#roadmap">Roadmap</a>
+        <a href="nft-gallery.html">NFT Gallery</a>
+        <a href="index.html#about">About Us</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="tokenomics.html" style="color:#ff6ad5;">Asset Registry</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="tokenomics">
+    <div class="tokenomics-title">Native Asset Registry</div>
+    <div class="tokenomics-grid">
+      <div class="tokenomics-info">
+        <div class="tokenomics-block">
+          <div class="headline">Native RA Supply</div>
+          <div class="content" id="supply-typing"></div>
+        </div>
+        <div class="tokenomics-block">
+          <div class="headline">RA KIDS Supply</div>
+          <div class="content" id="startprice-typing"></div>
+        </div>
+        <div class="tokenomics-block">
+          <div class="headline">Network Identity</div>
+          <div class="content" id="launchprice-typing"></div>
+        </div>
+        <div class="tokenomics-block">
+          <div class="headline">Whitepaper</div>
+          <a href="RA-Atum-Whitepaper.pdf" target="_blank"><i class="fas fa-file-download"></i> Download</a>
+        </div>
+      </div>
+      <div class="tokenomics-chart-container">
+        <canvas id="tokenomicsChart" width="300" height="300"></canvas>
+        <img src="RA-ATUM-LOGO.png" alt="RA Atum Logo" class="chart-logo-center" />
+      </div>
+    </div>
+    <div id="registry-notice" style="text-align:center;margin-top:6px;color:#00ffd0;font-size:1.08em;font-weight:bold;">RA and RAK are separate native ledger assets; these supplies are not combined.</div>
+    <div class="tokenomics-details">
+      <div class="tokenomics-percent" id="detail-1"></div>
+      <div class="tokenomics-percent" id="detail-2"></div>
+      <div class="tokenomics-percent" id="detail-3"></div>
+      <div class="tokenomics-percent" id="detail-4"></div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2026 RA ATUM. Working testnet information.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script src="js/tokenomics.js"></script>
+
+</body>
+</html>

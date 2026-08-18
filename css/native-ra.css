@@ -1,0 +1,345 @@
+/* ... ALL YOUR STYLES SAME AS BEFORE ... */
+    /* KEEP YOUR FULL STYLE BLOCK FROM YOUR PASTE! */
+    :root {
+      --blue: #00b4fa;
+      --sand: #e7d7b6;
+      --bg-dark: #10151b;
+      --card-bg: #192332e6;
+      --glow: 0 0 24px #00b4fa55, 0 2px 32px #00b4fa33;
+      --shine-grad: linear-gradient(90deg, #fff 8%, #00b4fa 60%, #23e6ff 98%);
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Share Tech Mono', monospace;
+      background: var(--bg-dark) url('https://e1.pxfuel.com/desktop-wallpaper/767/930/desktop-wallpaper-printed-circuit-board-video-motherboard-blue-and-purple-digital-circuit-board-background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: var(--sand);
+      min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+    }
+    body::before {
+      content: "";
+      position: fixed; top:0; left:0; right:0; bottom:0;
+      background: linear-gradient(115deg, #0c0c10bb 0%, #191a24b7 90%);
+      z-index: 0;
+      pointer-events: none;
+      opacity: 0.85;
+      mix-blend-mode: multiply;
+    }
+    .back-link-bottom {
+      display: inline-block;
+      position: relative;
+      margin: 38px auto 18px auto;
+      color: var(--blue);
+      font-size: 1.09em;
+      font-family: 'Share Tech Mono', monospace;
+      font-weight: bold;
+      text-decoration: none;
+      background: #172432b3;
+      padding: 10px 24px 10px 16px;
+      border-radius: 16px;
+      box-shadow: 0 2px 15px #00b4fa33;
+      transition: background .16s, color .13s;
+      z-index: 15;
+      letter-spacing: 1.1px;
+    }
+    .back-link-bottom i {
+      margin-right: 7px;
+      font-size: 1.09em;
+    }
+    .back-link-bottom:hover {
+      background: #e7d7b6;
+      color: #003a5c;
+      text-decoration: underline;
+    }
+    .token-main {
+      max-width: 1150px;
+      margin: 0 auto;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding: 50px 6vw 24px 6vw;
+      gap: 48px;
+      position: relative;
+      z-index: 2;
+    }
+    .token-content {
+      flex: 2;
+      min-width: 320px;
+      padding-top: 20px;
+    }
+    .token-logo-side {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: flex-start;
+      position: relative;
+      min-width: 200px;
+    }
+    .ra-logo-right {
+      width: 220px;
+      max-width: 44vw;
+      height: auto;
+      border-radius: 36px;
+      background: #161922;
+      box-shadow: var(--glow);
+      border: 3px solid #00b4fa44;
+      margin-right: 0;
+      margin-left: 0;
+      margin-top: 12px;
+      margin-bottom: 0;
+      transition: transform .19s;
+      position: absolute;
+      top: 0; right: 0;
+      z-index: 2;
+    }
+    .ra-logo-right:hover {
+      transform: scale(1.04) rotate(2deg);
+      box-shadow: 0 18px 68px #00b4faaa, 0 0 0 18px #191a24bb;
+    }
+    .token-supply-row-img {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      width: 100%;
+      margin: 16px 0 0 0;
+      gap: 25px;
+      position: relative;
+    }
+    .token-label.no-alloc {
+      margin-bottom: 0;
+      min-width: 200px;
+      font-size: 1.02em;
+      text-align: left;
+      display: inline-block;
+    }
+    .scroll-image {
+      width: 220px;
+      max-width: 44vw;
+      border-radius: 36px;
+      box-shadow: 0 12px 32px #00b4fa44, 0 2px 14px #00315599;
+      opacity: 0;
+      transform: translateX(90px);
+      transition: opacity 0.95s, transform 0.95s;
+      z-index: 1;
+      margin-left: 0;
+      margin-top: 0;
+      margin-bottom: 0;
+      background: #10151b;
+    }
+    .scroll-image.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    .token-headline {
+      font-size: 2.3rem;
+      font-weight: bold;
+      letter-spacing: 1.2px;
+      margin-bottom: 18px;
+      background: var(--shine-grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-shadow: 0 2px 18px #22213866, 0 0 8px #00b4fa88;
+      filter: brightness(1.19);
+      text-transform: uppercase;
+    }
+    .token-desc {
+      font-size: 1.15rem;
+      color: #e7d7b6;
+      margin-bottom: 32px;
+      line-height: 1.5;
+      font-weight: bold;
+      text-shadow: 0 2px 13px #00b4fa33;
+    }
+    .token-supply {
+      margin: 24px 0 22px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 11px;
+    }
+    .token-supply-big {
+      font-size: 2.2em;
+      font-weight: bold;
+      color: #00b4fa;
+      background: linear-gradient(90deg,#fff 10%,#00b4fa 80%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-shadow: 0 2px 18px #00b4fa33;
+      filter: brightness(1.17);
+      margin-bottom: 2px;
+    }
+    .token-label {
+      font-size: 1em;
+      color: #e7d7b6;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1.1px;
+      margin-bottom: 4px;
+    }
+    .token-line {
+      border: none;
+      border-top: 2.2px dashed #00b4fa77;
+      margin: 22px auto 22px auto;
+      width: 88%;
+      opacity: 0.8;
+    }
+    .token-feature-row {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin: 7px 0;
+      color: #00b4fa;
+      font-weight: bold;
+      font-size: 1.09em;
+      letter-spacing: .8px;
+    }
+    .token-feature-row i {
+      color: #23e6ff;
+      font-size: 1.12em;
+      margin-right: 7px;
+    }
+    .token-price-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 36px 0 26px 0;
+      background: #23243bde;
+      border-radius: 13px;
+      box-shadow: 0 4px 28px #00b4fa33, 0 2px 14px #00315599;
+      border: 2px solid #00b4fa44;
+      padding: 22px 16px 22px 16px;
+      max-width: 420px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .token-price-label {
+      color: #00b4fa;
+      font-size: 1.11em;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 2px;
+      letter-spacing: 1.1px;
+      text-transform: uppercase;
+    }
+    .token-price-val {
+      color: #e7d7b6;
+      font-size: 1.19em;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 10px;
+      letter-spacing: 0.4px;
+      text-shadow: 0 2px 8px #00c3ff44;
+    }
+    .token-uplift-label {
+      color: #00b4fa;
+      font-size: 1.09em;
+      text-align: center;
+      margin-bottom: 2px;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+    .token-uplift-val {
+      color: #e7d7b6;
+      font-size: 1.15em;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 2px;
+      text-shadow: 0 2px 8px #00c3ff44;
+    }
+    .token-how {
+      margin-top: 16px;
+      padding: 15px 13px;
+      border-radius: 12px;
+      background: #181a1b;
+      border: 1.7px solid #00b4fa;
+      color: #fff;
+      font-size: 1.09em;
+      box-shadow: 0 2px 16px #00b4fa22;
+      text-align: left;
+      font-weight: bold;
+    }
+    .token-how-title {
+      color: #00b4fa;
+      text-transform: uppercase;
+      font-size: 1.07em;
+      letter-spacing: .7px;
+      margin-bottom: 8px;
+      background: var(--shine-grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-shadow: 0 2px 14px #00315590;
+      filter: brightness(1.10);
+      font-weight: bold;
+    }
+    .token-how-list {
+      margin: 0 0 0 6px;
+      padding-left: 18px;
+      color: #23e6ff;
+    }
+    .token-contract-link {
+      color: #00b4fa;
+      font-weight: bold;
+      text-decoration: underline;
+      margin-top: 22px;
+      display: inline-block;
+      font-size: 1.09em;
+      letter-spacing: .6px;
+    }
+    .token-contract-link i {
+      margin-right: 5px;
+    }
+    .why-btn-row {
+      margin-top: 30px;
+      text-align: left;
+    }
+    .buy-btn {
+      background: linear-gradient(90deg, #00b4fa 10%, #00ffd0 90%);
+      color: #181a1b;
+      font-family: 'Share Tech Mono', monospace;
+      border: none;
+      border-radius: 14px;
+      padding: 14px 36px;
+      font-size: 1.16em;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 6px 32px #00b4fa22;
+      transition: background .18s, color .17s, transform .13s;
+      letter-spacing: 1px;
+      margin-top: 0;
+      min-width: 190px;
+      outline: none;
+      display: inline-block;
+    }
+    .buy-btn:hover {
+      background: #e7d7b6;
+      color: #002a37;
+      transform: scale(1.045);
+    }
+    @media (max-width:950px) {
+      .token-main { flex-direction: column-reverse; gap: 18px; padding-top: 30px; align-items:center;}
+      .token-logo-side { justify-content: center; width:100%; min-width:unset; }
+      .ra-logo-right { position:static; margin:0 auto 14px auto; display:block; }
+      .token-supply-row-img { justify-content: center; }
+      .scroll-image { margin:14px auto 0 auto; display:block; }
+    }
+    @media (max-width:600px) {
+      .token-main { padding: 10vw 3vw 4vw 3vw; }
+      .token-content { padding-top: 0; }
+      .token-headline { font-size: 1.07em; }
+      .token-price-section { font-size: 0.95em; padding: 12px 5px 12px 5px; }
+      .ra-logo-right { width: 88vw; min-width:80vw; border-radius: 16px; }
+      .scroll-image { width: 88vw; max-width: 95vw; border-radius: 16px;}
+      .token-supply-row-img { flex-direction: column; gap:10px; align-items:center;}
+      .back-link-bottom { font-size: 0.97em; padding: 8px 14px 8px 10px;}
+    }
+    .footer-spacer { height: 40px; }

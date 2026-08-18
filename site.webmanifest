@@ -1,0 +1,11 @@
+{
+  "name": "RA ATUM Website Pro",
+  "short_name": "RA ATUM",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#070b13",
+  "theme_color": "#0e1018",
+  "icons": [
+    { "src": "/RA-ATUM-LOGO.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
