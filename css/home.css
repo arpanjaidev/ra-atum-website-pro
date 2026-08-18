@@ -1085,3 +1085,157 @@ img[src$="RAROBO.png"]{
   .rarobo-card{ width:min(480px, 94vw); }
   .rarobo-mute{ right:8px; bottom:8px; font-size:12px; padding:6px 9px; }
 }
+
+/* === RA ATUM NEON HEADER REFINEMENT — 2026-08-18 === */
+header {
+  top: 36px;
+  box-sizing: border-box;
+  flex-wrap: nowrap;
+  gap: clamp(8px, 1.2vw, 18px);
+  min-height: 62px;
+  padding: 9px clamp(14px, 2.3vw, 34px);
+  background:
+    linear-gradient(110deg, rgba(4, 7, 20, .97), rgba(10, 20, 42, .95) 50%, rgba(22, 7, 37, .96));
+  border-bottom: 1px solid rgba(0, 238, 255, .72);
+  box-shadow:
+    0 8px 28px rgba(0, 180, 250, .24),
+    0 0 22px rgba(191, 0, 255, .15),
+    inset 0 -1px 0 rgba(255, 72, 210, .24);
+  backdrop-filter: blur(16px) saturate(145%);
+  -webkit-backdrop-filter: blur(16px) saturate(145%);
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  left: 3%;
+  right: 3%;
+  bottom: -1px;
+  height: 1px;
+  pointer-events: none;
+  background: linear-gradient(90deg, transparent, #00eaff, #b833ff, #ff4fd8, transparent);
+  filter: drop-shadow(0 0 7px #00eaff);
+}
+
+header nav {
+  width: auto;
+  flex: 1 1 auto;
+  gap: clamp(5px, .8vw, 12px);
+  padding: 2px;
+}
+
+header nav a {
+  position: relative;
+  padding: 9px clamp(9px, 1vw, 14px);
+  color: #8ff7ff;
+  border: 1px solid rgba(0, 226, 255, .25);
+  border-radius: 10px;
+  background: linear-gradient(135deg, rgba(0, 210, 255, .07), rgba(178, 51, 255, .08));
+  text-shadow: 0 0 9px rgba(0, 229, 255, .72);
+  box-shadow: inset 0 0 12px rgba(0, 206, 255, .04);
+  transition: color .2s ease, border-color .2s ease, box-shadow .2s ease, transform .2s ease, background .2s ease;
+}
+
+header nav a:hover,
+header nav a:focus-visible {
+  color: #fff;
+  border-color: #ff4fd8;
+  background: linear-gradient(135deg, rgba(0, 234, 255, .17), rgba(184, 51, 255, .2));
+  box-shadow: 0 0 13px rgba(0, 234, 255, .42), 0 0 22px rgba(255, 79, 216, .22);
+  text-shadow: 0 0 8px #00eaff, 0 0 15px #b833ff;
+  transform: translateY(-1px);
+}
+
+header nav .connect-wallet-btn {
+  color: #081018;
+  border-color: #5cfff0;
+  background: linear-gradient(100deg, #00eaff, #5cfff0 45%, #d86bff);
+  text-shadow: none;
+  box-shadow: 0 0 14px rgba(0, 234, 255, .54), 0 0 22px rgba(216, 107, 255, .28);
+}
+
+header nav .connect-wallet-btn:hover,
+header nav .connect-wallet-btn:focus-visible {
+  color: #071019;
+  background: linear-gradient(100deg, #7bfff5, #00eaff 48%, #ff74dc);
+  box-shadow: 0 0 18px rgba(0, 234, 255, .75), 0 0 28px rgba(255, 79, 216, .42);
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+
+.header-brand-mark {
+  width: 40px;
+  height: 40px;
+  padding: 3px;
+  display: inline-grid;
+  place-items: center;
+  border: 1px solid rgba(0, 234, 255, .65);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 234, 255, .14), rgba(184, 51, 255, .08) 62%, transparent 70%);
+  box-shadow: 0 0 12px rgba(0, 234, 255, .45), 0 0 20px rgba(184, 51, 255, .25);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.header-brand-mark:hover {
+  transform: scale(1.06);
+  box-shadow: 0 0 16px rgba(0, 234, 255, .72), 0 0 28px rgba(255, 79, 216, .38);
+}
+
+.header-logo-compact {
+  display: block;
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 5px rgba(0, 234, 255, .55));
+}
+
+.rarobo-only,
+img.rarobo-only,
+img[src$="RAROBO.png"].rarobo-only {
+  width: 42px !important;
+  height: 42px !important;
+  margin: 0 4px !important;
+  object-fit: contain;
+  filter: drop-shadow(0 0 6px rgba(0, 234, 255, .55)) !important;
+  -webkit-filter: drop-shadow(0 0 6px rgba(0, 234, 255, .55)) !important;
+}
+
+.header-brand-mark--mobile {
+  margin: 14px auto 4px;
+}
+
+@media (max-width: 980px) {
+  header {
+    min-height: 58px;
+    padding: 8px 14px;
+  }
+
+  .header-brand-mark {
+    width: 36px;
+    height: 36px;
+  }
+
+  .header-logo-compact {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 560px) {
+  header {
+    top: 34px;
+  }
+
+  .rarobo-only,
+  img.rarobo-only,
+  img[src$="RAROBO.png"].rarobo-only {
+    width: 36px !important;
+    height: 36px !important;
+  }
+}
+
