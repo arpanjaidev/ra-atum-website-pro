@@ -1497,3 +1497,80 @@ img[src$="RA-ATUM-LOGO.png"].ra-header-logo {
   }
 }
 
+/* === MOBILE LEFT TPS + CLEAN MENU ICON — R2 2026-08-18 === */
+@media (max-width: 800px) {
+  header {
+    justify-content: space-between !important;
+    gap: 12px;
+  }
+
+  .header-tps {
+    order: 2;
+    margin-left: 0;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 4px;
+    justify-items: start;
+    text-align: left;
+    border-left: 0;
+  }
+
+  .header-tps::before {
+    content: none;
+    display: none;
+  }
+
+  .hamburger {
+    order: 3;
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    margin-left: auto;
+    margin-right: 2px;
+    padding: 6px 2px;
+    color: #8ff7ff;
+    border: 0 !important;
+    border-radius: 0;
+    background: transparent !important;
+    box-shadow: none !important;
+    text-shadow: 0 0 7px rgba(0, 234, 255, .72);
+  }
+
+  .hamburger:hover,
+  .hamburger:focus-visible {
+    color: #ff76df;
+    border: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    text-shadow: 0 0 8px #00eaff, 0 0 13px rgba(255, 79, 216, .72);
+    transform: scale(1.06);
+  }
+
+  .hamburger i {
+    display: block;
+    line-height: 1;
+  }
+}
+
+@media (max-width: 420px) {
+  header {
+    gap: 9px;
+  }
+
+  .header-tps {
+    margin-left: 0;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 2px;
+  }
+
+  .hamburger {
+    width: auto;
+    height: auto;
+    margin-left: auto;
+    margin-right: 1px;
+    padding: 5px 1px;
+    font-size: 1.72rem;
+  }
+}
+
