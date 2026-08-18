@@ -990,7 +990,7 @@ img[src$="RAROBO.png"]{
 .mid-banner img:focus{ outline: 0 !important; }
 
     /* RAROBO image: only the PNG, kill any global rings/underlines/outlines */
-.rarobo-only{
+.ra-header-logo{
   display:block;
   margin:16px auto;
   width:100px;                  /* adjust if you want it bigger */
@@ -1005,8 +1005,8 @@ img[src$="RAROBO.png"]{
 }
 
 /* if some global styles use pseudo-elements for borders, disable them */
-.rarobo-only::before,
-.rarobo-only::after{ content:none !important; display:none !important; }
+.ra-header-logo::before,
+.ra-header-logo::after{ content:none !important; display:none !important; }
 
 
 /* wrapper: no borders/glow/background */
@@ -1151,7 +1151,7 @@ header nav a {
   transition: transform .2s ease, filter .2s ease, letter-spacing .2s ease;
 }
 
-header nav a:not(.rarobo-brand)::after {
+header nav a:not(.ra-header-brand)::after {
   content: "";
   position: absolute;
   left: 0;
@@ -1163,13 +1163,13 @@ header nav a:not(.rarobo-brand)::after {
   transition: right .25s ease;
 }
 
-header nav a:not(.rarobo-brand):hover::after,
-header nav a:not(.rarobo-brand):focus-visible::after {
+header nav a:not(.ra-header-brand):hover::after,
+header nav a:not(.ra-header-brand):focus-visible::after {
   right: 0;
 }
 
-header nav a:not(.rarobo-brand):hover,
-header nav a:not(.rarobo-brand):focus-visible {
+header nav a:not(.ra-header-brand):hover,
+header nav a:not(.ra-header-brand):focus-visible {
   color: transparent;
   letter-spacing: 1.25px;
   transform: translateY(-1px);
@@ -1192,7 +1192,7 @@ header nav .node-operator-link {
   to { background-position: -240% 0; }
 }
 
-.rarobo-brand {
+.ra-header-brand {
   flex: 0 0 auto;
   display: inline-grid !important;
   place-items: center;
@@ -1202,13 +1202,13 @@ header nav .node-operator-link {
   box-shadow: none !important;
 }
 
-.rarobo-brand::after {
+.ra-header-brand::after {
   content: none !important;
 }
 
-.rarobo-only,
-img.rarobo-only,
-img[src$="RAROBO.png"].rarobo-only {
+.ra-header-logo,
+img.ra-header-logo,
+img[src$="RA-ATUM-LOGO.png"].ra-header-logo {
   width: 46px !important;
   height: 46px !important;
   margin: 0 !important;
@@ -1221,8 +1221,8 @@ img[src$="RAROBO.png"].rarobo-only {
   transition: transform .22s ease, filter .22s ease !important;
 }
 
-.rarobo-brand:hover .rarobo-only,
-.rarobo-brand:focus-visible .rarobo-only {
+.ra-header-brand:hover .ra-header-logo,
+.ra-header-brand:focus-visible .ra-header-logo {
   transform: scale(1.07);
   filter: drop-shadow(0 0 8px rgba(0, 234, 255, .82)) drop-shadow(0 0 12px rgba(255, 79, 216, .45)) !important;
   -webkit-filter: drop-shadow(0 0 8px rgba(0, 234, 255, .82)) drop-shadow(0 0 12px rgba(255, 79, 216, .45)) !important;
@@ -1251,9 +1251,9 @@ img[src$="RAROBO.png"].rarobo-only {
     padding: 7px 14px;
   }
 
-  .rarobo-only,
-  img.rarobo-only,
-  img[src$="RAROBO.png"].rarobo-only {
+  .ra-header-logo,
+  img.ra-header-logo,
+  img[src$="RA-ATUM-LOGO.png"].ra-header-logo {
     width: 40px !important;
     height: 40px !important;
   }
@@ -1263,6 +1263,116 @@ img[src$="RAROBO.png"].rarobo-only {
   header::before,
   header nav a {
     animation: none !important;
+  }
+}
+
+/* === ANIMATED TPS TARGET READOUT — 2026-08-18 === */
+.header-tps {
+  position: relative;
+  flex: 0 0 auto;
+  min-width: 126px;
+  padding: 5px 0 4px 14px;
+  display: grid;
+  grid-template-columns: auto;
+  align-items: center;
+  justify-items: end;
+  white-space: nowrap;
+  border-left: 1px solid rgba(0, 234, 255, .42);
+  color: #9afcff;
+  line-height: 1;
+  text-align: right;
+  text-shadow: 0 0 8px rgba(0, 234, 255, .62);
+}
+
+.header-tps::before {
+  content: "";
+  position: absolute;
+  left: -1px;
+  top: 16%;
+  bottom: 16%;
+  width: 1px;
+  background: linear-gradient(#00eaff, #9e5dff, #ff55d9);
+  box-shadow: 0 0 8px #00eaff;
+}
+
+.tps-label,
+.tps-caption {
+  font-size: .60rem;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+  color: #b8c8ff;
+}
+
+.tps-caption {
+  margin-top: 2px;
+  color: #ff83df;
+  text-shadow: 0 0 7px rgba(255, 79, 216, .52);
+}
+
+.tps-value {
+  margin-top: 2px;
+  font-size: clamp(1rem, 1.28vw, 1.34rem);
+  font-weight: 900;
+  letter-spacing: .8px;
+  color: #71fff4;
+  font-variant-numeric: tabular-nums;
+  text-shadow: 0 0 7px #00eaff, 0 0 15px rgba(111, 123, 255, .55);
+}
+
+.tps-plus {
+  margin-left: 1px;
+  color: #ff68db;
+  text-shadow: 0 0 8px #ff4fd8;
+}
+
+.header-tps.tps-hit .tps-value {
+  animation: tps-complete-blink .18s steps(2, end) 4;
+}
+
+@keyframes tps-complete-blink {
+  0%, 100% {
+    opacity: 1;
+    color: #fff;
+    filter: drop-shadow(0 0 8px #00eaff) drop-shadow(0 0 12px #ff4fd8);
+  }
+  50% {
+    opacity: .2;
+    color: #ff68db;
+    filter: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .header-tps {
+    min-width: 104px;
+    padding-left: 10px;
+  }
+
+  .tps-label,
+  .tps-caption {
+    font-size: .52rem;
+    letter-spacing: 1px;
+  }
+
+  .tps-value {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .header-tps {
+    min-width: 91px;
+    padding-left: 7px;
+  }
+
+  .tps-caption {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .header-tps.tps-hit .tps-value {
+    animation: none;
   }
 }
 
