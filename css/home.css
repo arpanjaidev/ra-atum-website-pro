@@ -1266,12 +1266,13 @@ img[src$="RA-ATUM-LOGO.png"].ra-header-logo {
   }
 }
 
-/* === ANIMATED TPS TARGET READOUT — 2026-08-18 === */
+/* === ANIMATED TPS PERFORMANCE READOUT — 2026-08-18 === */
 .header-tps {
   position: relative;
   flex: 0 0 auto;
-  min-width: 126px;
-  padding: 5px 0 4px 14px;
+  min-width: 174px;
+  margin-right: clamp(10px, 1.8vw, 28px);
+  padding: 6px 0 5px 16px;
   display: grid;
   grid-template-columns: auto;
   align-items: center;
@@ -1296,7 +1297,8 @@ img[src$="RA-ATUM-LOGO.png"].ra-header-logo {
 }
 
 .tps-label,
-.tps-caption {
+.tps-caption,
+.tps-trust {
   font-size: .60rem;
   font-weight: 800;
   letter-spacing: 1.4px;
@@ -1307,6 +1309,19 @@ img[src$="RA-ATUM-LOGO.png"].ra-header-logo {
   margin-top: 2px;
   color: #ff83df;
   text-shadow: 0 0 7px rgba(255, 79, 216, .52);
+}
+
+.tps-trust {
+  margin-top: 4px;
+  font-size: .50rem;
+  color: #82ffe9;
+  letter-spacing: .72px;
+  text-shadow: 0 0 6px rgba(0, 234, 255, .58);
+}
+
+.tps-trust b {
+  color: #ff68db;
+  text-shadow: 0 0 6px #ff4fd8;
 }
 
 .tps-value {
@@ -1344,12 +1359,14 @@ img[src$="RA-ATUM-LOGO.png"].ra-header-logo {
 
 @media (max-width: 760px) {
   .header-tps {
-    min-width: 104px;
+    min-width: 138px;
+    margin-right: 4px;
     padding-left: 10px;
   }
 
   .tps-label,
-  .tps-caption {
+  .tps-caption,
+  .tps-trust {
     font-size: .52rem;
     letter-spacing: 1px;
   }
@@ -1361,11 +1378,13 @@ img[src$="RA-ATUM-LOGO.png"].ra-header-logo {
 
 @media (max-width: 420px) {
   .header-tps {
-    min-width: 91px;
+    min-width: 108px;
+    margin-right: 0;
     padding-left: 7px;
   }
 
-  .tps-caption {
+  .tps-caption,
+  .tps-trust {
     display: none;
   }
 }
